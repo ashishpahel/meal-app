@@ -1,0 +1,345 @@
+
+:root
+{
+    --bg_color_1: #000000;
+    --bg_color_2: #1c041c;
+    --bg_color_3: #0e0e0e;
+    --bg_color_4: #280000;
+    --bg_music_bar: #2b2b2a;
+    --tenne-tawny: #d65108;
+    --tenne-tawny-dark: #b54507;
+}
+
+body{
+    margin: 0;
+    color: white;
+    background-color: gray;
+    font-family: cursive;
+}
+
+
+/* dividing screen into header and main section */
+
+.header-section{
+    margin-top: -10vh;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: fixed;
+    background-color: coral;
+    align-content: center;
+    justify-content: space-between;
+}
+
+
+/* header of the application where we can search any music and login menu */
+
+.image img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.image-inner h3{
+    margin-bottom: -46%;
+
+}
+
+.image-inner{
+    padding-left: 4%;
+    cursor: default;
+}
+.image-inner:hover{
+        opacity: 0.3;
+}
+
+.logo{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0% 2% 0% 2%;
+    align-content: center;
+    align-items: center;
+    width: 30%;
+}
+/* Input box */
+#input-data{
+    height: 1.4rem;
+    width: 14vw;
+    margin-right: 3px;
+    background-color: var(--bg_color_2);
+    border-style: outset;
+    color: white;
+    text-align: center;
+    font-family: helvetica, sans-serif;
+}
+/* container of input box, search button and fav button */
+.search-bar-utility{
+    width: 27%;
+    display: flex;
+    position: absolute;
+    margin-left: 41%;
+    margin-top: 2%;
+}
+/* container of search and fav buttons */
+.cart{
+    margin-left: 33%;
+    border: 0;
+    font-size: 0.9rem;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.cart:hover{
+    background-color: #ffffffb3;
+}
+/* search button */
+#input-button{
+    border: 0;
+    font-size: 0.9rem;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#input-button:hover{
+    background-color: #ffffffb3;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .search-bar-utility{
+    margin-left: 36%;
+    margin-top: 5%;
+  }
+
+}
+
+
+/* Text line just after the header section */
+.title{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+/* outer container of main section */
+.meal-result{
+    margin-top: 4rem;
+    padding: 0px 21px;
+}
+/* container of main section which contain all meal */
+#meal{
+    margin: 1.4rem 0;
+}
+/* container of fav page main section which contain all meal */
+#fav-meal{
+    margin: 1.4rem 0;
+}
+/* container of single meal containing all details about meal */
+.meal-item{
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: coral;
+    box-shadow: 0 4px 21px -12px rgb(156 159 179);
+    margin: 2rem 0;
+}
+/* meal image */
+.meal-img img{
+    width: 86%;
+    display: block;
+    margin: 4% -15% 7% 7%;
+    border-radius: 11px;
+}
+/* div which contain name and buttons */
+.meal-name{
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*meal name*/
+.meal-name h3{
+    font-size: 1.4rem;
+}
+/* containing both button recipe and add to fav */
+.two-buttons{
+    display: flex;
+    align-items: center;
+
+}
+/* recipe button */
+.recipe-btn{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    background: #324a4994;
+    font-size: 1.1rem;
+    padding: 0.4rem 0;
+    width: 122px;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    margin-right: 20px;
+}
+.recipe-btn:hover{
+    background: #32706b;
+}
+/* add to fav button */
+.addtofav{
+    border-radius: 15px;
+    padding: 0.4rem;
+    width: 114px;
+    background: #324a4994;
+    color: white;
+    font-size: 0.99rem;
+    cursor: pointer;
+}
+
+.addtofav:hover{
+    background: #32706b;
+}
+
+/* meal details */
+.meal-details{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: #32706b;
+    border-radius: 1rem;
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll;
+    display: none;
+    padding: 2rem 0;
+}
+
+/* js related */
+.showRecipe{
+    display: block;
+}
+/* inner div of meal detailed section */
+.meal-details-content{
+    margin: 2rem;
+}
+.meal-details-content p:not(.recipe-category){
+    padding: 1rem 0;
+}
+/* close details section */
+.recipe-close-btn{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    background: #fff;
+    border: none;
+    height: 35px;
+    border-radius: 50%;
+    opacity: 0.9;
+    cursor: pointer;
+}
+.recipe-title{
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+}
+/* recipe instruction */
+.recipe-instruct{
+    padding: 1rem 0;
+}
+/* recipe meal img in details section */
+.recipe-meal-img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+/* youtube watch video link */
+.recipe-link{
+    margin: 1.4rem 0;
+    text-align: center;
+}
+.recipe-link a{
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.4s linear;
+}
+
+/* text written on screen after meal not found */
+.notFound{
+    grid-template-columns: 1fr!important;
+    color: #32706b;
+    font-size: 1.8rem;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+/* remove meal from fav list */
+.remove2{
+    border-radius: 15px;
+    padding: 0.4rem;
+    width: 114px;
+    background: #324a4994;
+    color: white;
+    font-size: 0.99rem;
+    cursor: pointer;
+}
+
+.remove2:hover{
+    background: #32706b;
+}
+
+
+
+
+
+
+/* Media Queries */
+@media screen and (min-width: 450px){
+    #meal{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+    #fav-meal{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+ 
+}
+
+@media screen and (min-width: 680px){
+    #meal{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    #fav-meal{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .meal-item{
+        margin: 0;
+    }
+    .meal-details{
+        width: 700px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    #meal{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #fav-meal{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

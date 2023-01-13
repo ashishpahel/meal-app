@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/CSS" href="style.css">
+  <title>Meal App</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- header section  -->
+    <div class="header-section">
+        <div class="logo image">
+           <img src="https://images.squarespace-cdn.com/content/v1/61d8beaf3a7d6731ad3de44d/0ff6beab-d0ca-48ec-af73-9aa456844cca/MEAL_circle_logo-Web.jpg">
+           <div class="image-inner" onclick="gotoHome()">
+              <h3>Meal</h3>
+              <h2>Finder</h2>
+           </div>
+        </div>
+        
+        <div class="search-bar-utility">
+            <form>
+              <input id="input-data" type="text" name="search" placeholder="Search">
+            </form>
+            <button id="input-button">Search</button>
+            <button class="cart" onclick="gotoFav()">Favourite</button>
+        </div>
+     </div>
+
+     <!-- meal result  -->
+     <div class = "meal-result">
+        <h2 class = "title">Your Search Results:</h2>
+        <div id= "meal">
+        </div>
+      </div>
+
+      <!-- meal detail page  -->
+      <div class = "meal-details">
+        <!-- recipe close btn -->
+        <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn">Close
+        </button>
+
+        <!-- meal content -->
+        <div class = "meal-details-content">
+        </div>
+      </div>
+    </div>
+
+<script src = "index.js"></script>
+</body>
+</html> 

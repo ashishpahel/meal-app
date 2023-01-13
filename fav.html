@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/CSS" href="style.css">
+  <title>Meal App</title>
+</head>
+<body>
+  <div id= "container">
+    <div class="header-section">
+      <div class="logo image">
+         <img src="https://images.squarespace-cdn.com/content/v1/61d8beaf3a7d6731ad3de44d/0ff6beab-d0ca-48ec-af73-9aa456844cca/MEAL_circle_logo-Web.jpg">
+         <div class="image-inner" onclick="gotoHome()">
+            <h3>Meal</h3>
+            <h2>Finder</h2>
+         </div>
+      </div>
+      <div class="search-bar-utility fav-infavsection">
+          <button class="cart">Favourite</button>
+      </div>
+     </div>
+
+      <div class = "meal-result">
+        <h2 class = "title">Your Favourite Food Items Are Shown Below:</h2>
+        <!-- <button onclick="createFavMealList()">show</button> -->
+          <div id= "fav-meal">
+        </div>
+      </div>
+
+      <!-- meal detail page  -->
+      <div class = "meal-details">
+        <!-- recipe close btn -->
+        <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn">Close
+        </button>
+
+        <!-- meal content -->
+        <div class = "meal-details-content">
+        </div>
+      </div>
+  </div>
+
+<script src = "script.js"></script>
+</body>
+</html>
